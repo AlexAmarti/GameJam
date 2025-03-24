@@ -17,14 +17,20 @@ public class Contador : MonoBehaviour
     bool player1Reacted = false;
     bool player2Reacted = false;
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     float maxReactionTime = 1f;
 =======
+=======
+>>>>>>> Stashed changes
     bool player1Blocked = false;
     bool player2Blocked = false;
     float player1UnblockTime = 0f;
     float player2UnblockTime = 0f;
     float maxReactionTime = 1f;
     float penaltyTime = 0.5f; // Tiempo de penalización (0.5 segundos)
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 
     void Start()
@@ -50,6 +56,7 @@ public class Contador : MonoBehaviour
             Debug.Log("Tiempo: " + timer.ToString("F0"));
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             if (timer >= randomTime)
             {
                 hasTriggered = true;
@@ -73,6 +80,16 @@ public class Contador : MonoBehaviour
 
             if (!player1Blocked && Input.GetKeyDown(KeyCode.Space))
             {
+=======
+            // Verifica si los jugadores pueden ser desbloqueados
+            if (player1Blocked && Time.time >= player1UnblockTime)
+                player1Blocked = false;
+            if (player2Blocked && Time.time >= player2UnblockTime)
+                player2Blocked = false;
+
+            if (!player1Blocked && Input.GetKeyDown(KeyCode.Space))
+            {
+>>>>>>> Stashed changes
                 player1Blocked = true;
                 player1UnblockTime = Time.time + penaltyTime;
                 Debug.Log("JUGADOR 1 PRESIONÓ ANTES DE TIEMPO. Penalización de 0.5 segundos.");
@@ -99,6 +116,9 @@ public class Contador : MonoBehaviour
         {
             if (!player1Reacted && !player1Blocked && Input.GetKeyDown(KeyCode.Space))
             {
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
                 player1ReactionTime = Time.time - reactionStartTime;
                 player1Reacted = true;
@@ -106,7 +126,11 @@ public class Contador : MonoBehaviour
             }
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             if (!player2Reacted && Input.GetMouseButtonDown(0))
+=======
+            if (!player2Reacted && !player2Blocked && Input.GetMouseButtonDown(0))
+>>>>>>> Stashed changes
 =======
             if (!player2Reacted && !player2Blocked && Input.GetMouseButtonDown(0))
 >>>>>>> Stashed changes
@@ -163,6 +187,11 @@ public class Contador : MonoBehaviour
         hasTriggered = false;
         timer = 0f;
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+        player1Blocked = false;
+        player2Blocked = false;
+>>>>>>> Stashed changes
 =======
         player1Blocked = false;
         player2Blocked = false;
@@ -176,7 +205,11 @@ public class Contador : MonoBehaviour
         Debug.Log("Nuevo tiempo aleatorio: " + randomTime.ToString("F2") + " segundos");
     }
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 }
+=======
+}
+>>>>>>> Stashed changes
 =======
 }
 >>>>>>> Stashed changes

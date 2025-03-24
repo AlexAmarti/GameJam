@@ -9,34 +9,42 @@ public class Contador : MonoBehaviour
     float randomTime;
     float minTime = 2f;
     float maxTime = 45f;
-    bool hasTriggered = false;
+    public bool hasTriggered = false;
+    float reactionStartTime;
+    bool waitingForKey = false;
 
     void Start()
     {
         // Elegimos un número aleatorio entre 0 y 45 al iniciar
         randomTime = Random.Range(minTime, maxTime);
-        Debug.Log("Tiempo aleatorio escogido: " + randomTime.ToString("F2") + " segundos");
+        Debug.Log("Tiempo aleatorio escogido: " + randomTime.ToString("F0") + " segundos");
     }
 
     void Update()
     {
-        timer += Time.deltaTime;
-
-        Debug.Log("Tiempo: " + timer.ToString("F2"));
-
-        // Cuando el tiempo alcanza el valor aleatorio y no se ha activado aún
-        if (!hasTriggered && timer >= randomTime)
+        if (!hasTriggered)
         {
-            hasTriggered = true;
-            Debug.Log("¡Evento activado en el segundo " + timer.ToString("F2") + "!");
-            // Aquí puedes poner lo que necesites que pase
+            timer += Time.deltaTime;
+            Debug.Log("Tiempo: " + timer.ToString("F0"));
+
+            if (timer >= randomTime)
+            {
+                hasTriggered = true;
+                timer = randomTime; // Aseguramos que no siga subiendo
+                reactionStartTime = Time.time; // Guardamos el momento en que se debe pulsar
+                waitingForKey = true;
+                Debug.Log("¡PULSA ESPACIO YA!");
+            }
         }
-
-        // Si ya pasaron 45 segundos, puedes detener el contador o reiniciar
-        if (timer >= 45f)
+        else if (waitingForKey)
         {
-            Debug.Log("¡Se acabaron los 45 segundos!");
-            enabled = false; // Desactiva este script si ya no necesitas Update
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                float reactionTime = Time.time - reactionStartTime;
+                Debug.Log("¡Has pulsado ESPACIO!");
+                Debug.Log("Tiempo de reacción: " + reactionTime.ToString("F3") + " segundos");
+                waitingForKey = false;
+            }
         }
     }
 }

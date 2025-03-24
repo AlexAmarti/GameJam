@@ -8,30 +8,26 @@ public class Contador : MonoBehaviour
     float randomTime;
     int minTime = 2;
     int maxTime = 45;
+
     public bool hasTriggered = false;
     bool waitingForKey = false;
     bool waitingForRestart = false;
+
     float reactionStartTime;
     float player1ReactionTime;
     float player2ReactionTime;
+
     bool player1Reacted = false;
     bool player2Reacted = false;
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-    float maxReactionTime = 1f;
-=======
-=======
->>>>>>> Stashed changes
+
     bool player1Blocked = false;
     bool player2Blocked = false;
+
     float player1UnblockTime = 0f;
     float player2UnblockTime = 0f;
+
     float maxReactionTime = 1f;
-    float penaltyTime = 0.5f; // Tiempo de penalización (0.5 segundos)
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
+    float penaltyTime = 0.5f;
 
     void Start()
     {
@@ -50,46 +46,22 @@ public class Contador : MonoBehaviour
             return;
         }
 
+        // Fase antes de la señal
         if (!hasTriggered)
         {
             timer += Time.deltaTime;
             Debug.Log("Tiempo: " + timer.ToString("F0"));
 
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-            if (timer >= randomTime)
-            {
-                hasTriggered = true;
-                waitingForKey = true;
-                reactionStartTime = Time.time;
-                player1Reacted = false;
-                player2Reacted = false;
-                Debug.Log("¡PULSA ESPACIO (Jugador 1) o HAZ CLIC (Jugador 2)!");
-            }
-        }
-        else if (waitingForKey)
-        {
-            if (!player1Reacted && Input.GetKeyDown(KeyCode.Space))
-            {
-=======
-            // Verifica si los jugadores pueden ser desbloqueados
+            // Desbloqueo si ya pasó la penalización
             if (player1Blocked && Time.time >= player1UnblockTime)
                 player1Blocked = false;
+
             if (player2Blocked && Time.time >= player2UnblockTime)
                 player2Blocked = false;
 
+            // Reacción temprana - penalización
             if (!player1Blocked && Input.GetKeyDown(KeyCode.Space))
             {
-=======
-            // Verifica si los jugadores pueden ser desbloqueados
-            if (player1Blocked && Time.time >= player1UnblockTime)
-                player1Blocked = false;
-            if (player2Blocked && Time.time >= player2UnblockTime)
-                player2Blocked = false;
-
-            if (!player1Blocked && Input.GetKeyDown(KeyCode.Space))
-            {
->>>>>>> Stashed changes
                 player1Blocked = true;
                 player1UnblockTime = Time.time + penaltyTime;
                 Debug.Log("JUGADOR 1 PRESIONÓ ANTES DE TIEMPO. Penalización de 0.5 segundos.");
@@ -102,6 +74,7 @@ public class Contador : MonoBehaviour
                 Debug.Log("JUGADOR 2 PRESIONÓ ANTES DE TIEMPO. Penalización de 0.5 segundos.");
             }
 
+            // Señal de reacción
             if (timer >= randomTime)
             {
                 hasTriggered = true;
@@ -112,34 +85,27 @@ public class Contador : MonoBehaviour
                 Debug.Log("¡PULSA ESPACIO (Jugador 1) o HAZ CLIC (Jugador 2)!");
             }
         }
+
+        // Fase de reacción
         else if (waitingForKey)
         {
+            // Reacción jugador 1
             if (!player1Reacted && !player1Blocked && Input.GetKeyDown(KeyCode.Space))
             {
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
                 player1ReactionTime = Time.time - reactionStartTime;
                 player1Reacted = true;
                 Debug.Log("JUGADOR 1 reaccionó en: " + player1ReactionTime.ToString("F3") + " segundos");
             }
 
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-            if (!player2Reacted && Input.GetMouseButtonDown(0))
-=======
+            // Reacción jugador 2
             if (!player2Reacted && !player2Blocked && Input.GetMouseButtonDown(0))
->>>>>>> Stashed changes
-=======
-            if (!player2Reacted && !player2Blocked && Input.GetMouseButtonDown(0))
->>>>>>> Stashed changes
             {
                 player2ReactionTime = Time.time - reactionStartTime;
                 player2Reacted = true;
                 Debug.Log("JUGADOR 2 reaccionó en: " + player2ReactionTime.ToString("F3") + " segundos");
             }
 
+            // Evaluar resultados
             if (player1Reacted || player2Reacted)
             {
                 if (player1Reacted && !player2Reacted && Time.time - reactionStartTime >= maxReactionTime)
@@ -170,8 +136,10 @@ public class Contador : MonoBehaviour
     {
         if (player1ReactionTime < player2ReactionTime)
             Debug.Log("JUGADOR 1 gana la ronda.");
-        else
+        else if (player2ReactionTime < player1ReactionTime)
             Debug.Log("JUGADOR 2 gana la ronda.");
+        else
+            Debug.Log("¡Empate!");
     }
 
     void WaitForNextRound()
@@ -186,16 +154,8 @@ public class Contador : MonoBehaviour
         waitingForRestart = false;
         hasTriggered = false;
         timer = 0f;
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-=======
         player1Blocked = false;
         player2Blocked = false;
->>>>>>> Stashed changes
-=======
-        player1Blocked = false;
-        player2Blocked = false;
->>>>>>> Stashed changes
         SetNewRandomTime();
     }
 
@@ -204,12 +164,4 @@ public class Contador : MonoBehaviour
         randomTime = Random.Range(minTime, maxTime);
         Debug.Log("Nuevo tiempo aleatorio: " + randomTime.ToString("F2") + " segundos");
     }
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 }
-=======
-}
->>>>>>> Stashed changes
-=======
-}
->>>>>>> Stashed changes

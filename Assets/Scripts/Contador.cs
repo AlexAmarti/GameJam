@@ -8,16 +8,14 @@ public class Contador : MonoBehaviour
     int maxTime = 45;
     public bool hasTriggered = false;
     bool waitingForKey = false;
-    float player1Difference = 0f;
-    float player2Difference = 0f;
+    bool waitingForRestart = false;
+    float reactionStartTime;
+    float player1ReactionTime;
+    float player2ReactionTime;
     bool player1Reacted = false;
     bool player2Reacted = false;
+    float maxReactionTime = 1f;
 
-    void SetNewRandomTime()
-    {
-        randomTime = Random.Range(minTime, maxTime);
-        Debug.Log("Nuevo tiempo aleatorio elegido: " + randomTime.ToString("F0") + " segundos");
-    }
     void Start()
     {
         SetNewRandomTime();
@@ -25,47 +23,99 @@ public class Contador : MonoBehaviour
 
     void Update()
     {
-        // Contador normal
-        if (!hasTriggered || (hasTriggered && waitingForKey && (!player1Reacted || !player2Reacted)))
+        if (waitingForRestart)
+        {
+            if (Input.GetKeyDown(KeyCode.Q))
+            {
+                Debug.Log("Nueva ronda iniciada.");
+                StartNewRound();
+            }
+            return;
+        }
+
+        if (!hasTriggered)
         {
             timer += Time.deltaTime;
             Debug.Log("Tiempo: " + timer.ToString("F0"));
-        }
 
-        if (!hasTriggered && timer >= randomTime)
-        {
-            hasTriggered = true;
-            waitingForKey = true;
-            player1Reacted = false;
-            player2Reacted = false;
-            Debug.Log("¡PULSA ESPACIO (Jugador 1) o HAZ CLIC (Jugador 2)!");
+            if (timer >= randomTime)
+            {
+                hasTriggered = true;
+                waitingForKey = true;
+                reactionStartTime = Time.time;
+                player1Reacted = false;
+                player2Reacted = false;
+                Debug.Log("¡PULSA ESPACIO (Jugador 1) o HAZ CLIC (Jugador 2)!");
+            }
         }
-
-        if (waitingForKey)
+        else if (waitingForKey)
         {
-            // Registrar la diferencia de tiempo para el Jugador 1
             if (!player1Reacted && Input.GetKeyDown(KeyCode.Space))
             {
-                player1Difference = timer - randomTime;
+                player1ReactionTime = Time.time - reactionStartTime;
                 player1Reacted = true;
+                Debug.Log("JUGADOR 1 reaccionó en: " + player1ReactionTime.ToString("F3") + " segundos");
             }
 
-            // Registrar la diferencia de tiempo para el Jugador 2
             if (!player2Reacted && Input.GetMouseButtonDown(0))
             {
-                player2Difference = timer - randomTime;
+                player2ReactionTime = Time.time - reactionStartTime;
                 player2Reacted = true;
+                Debug.Log("JUGADOR 2 reaccionó en: " + player2ReactionTime.ToString("F3") + " segundos");
             }
 
-            // Detener el contador inmediatamente cuando ambos jugadores hayan reaccionado
-            if (player1Reacted && player2Reacted)
+            if (player1Reacted || player2Reacted)
             {
-                Debug.Log("Tiempo final: " + timer.ToString("F3") + " segundos");
-                Debug.Log("JUGADOR 1 - Diferencia de tiempo: " + player1Difference.ToString("F3") + " segundos");
-                Debug.Log("JUGADOR 2 - Diferencia de tiempo: " + player2Difference.ToString("F3") + " segundos");
-                Debug.Log("Resumen de la ronda:\nJUGADOR 1 - Diferencia: " + player1Difference.ToString("F3") + "s\nJUGADOR 2 - Diferencia: " + player2Difference.ToString("F3") + "s");
-                waitingForKey = false;
+                if (player1Reacted && !player2Reacted && Time.time - reactionStartTime >= maxReactionTime)
+                {
+                    Debug.Log("JUGADOR 2 no reaccionó a tiempo. JUGADOR 1 gana la ronda.");
+                    WaitForNextRound();
+                }
+                else if (player2Reacted && !player1Reacted && Time.time - reactionStartTime >= maxReactionTime)
+                {
+                    Debug.Log("JUGADOR 1 no reaccionó a tiempo. JUGADOR 2 gana la ronda.");
+                    WaitForNextRound();
+                }
+                else if (player1Reacted && player2Reacted)
+                {
+                    DetermineWinner();
+                    WaitForNextRound();
+                }
+            }
+            else if (Time.time - reactionStartTime >= maxReactionTime)
+            {
+                Debug.Log("Ningún jugador reaccionó a tiempo. Nueva ronda.");
+                WaitForNextRound();
             }
         }
+    }
+
+    void DetermineWinner()
+    {
+        if (player1ReactionTime < player2ReactionTime)
+            Debug.Log("JUGADOR 1 gana la ronda.");
+        else
+            Debug.Log("JUGADOR 2 gana la ronda.");
+    }
+
+    void WaitForNextRound()
+    {
+        waitingForKey = false;
+        waitingForRestart = true;
+        Debug.Log("Presiona 'Q' para iniciar una nueva ronda.");
+    }
+
+    void StartNewRound()
+    {
+        waitingForRestart = false;
+        hasTriggered = false;
+        timer = 0f;
+        SetNewRandomTime();
+    }
+
+    void SetNewRandomTime()
+    {
+        randomTime = Random.Range(minTime, maxTime);
+        Debug.Log("Nuevo tiempo aleatorio: " + randomTime.ToString("F2") + " segundos");
     }
 }

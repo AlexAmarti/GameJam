@@ -1303,7 +1303,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2067402649}
         m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
-        m_MethodName: OpenCredits
+        m_MethodName: StartGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

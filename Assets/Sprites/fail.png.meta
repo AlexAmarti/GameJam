@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c25da90e7a71e8847bc4fdc11735422f
+guid: 216256e6336392e4882692a758829c59
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,85 +110,211 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: anuncios podridos_0
+      name: fail_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 640
-        width: 640
-        height: 640
+        y: 238
+        width: 143
+        height: 119
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4cd14a51450c3194185bcb46ce3589ec
-      internalID: -935118527
+      spriteID: d252e758686613a4396a80ba3965842d
+      internalID: 823284291
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: anuncios podridos_1
+      name: fail_1
       rect:
         serializedVersion: 2
-        x: 640
-        y: 640
-        width: 640
-        height: 640
+        x: 143
+        y: 238
+        width: 143
+        height: 119
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 576d2d48e2eddb1478730d9eebe427e8
-      internalID: 2066241914
+      spriteID: f526be983864bde48aba869386a86935
+      internalID: -474594640
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: anuncios podridos_2
+      name: fail_2
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 238
+        width: 143
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff2ae172ef422294786cee827a02c1b0
+      internalID: -521865999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fail_3
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 238
+        width: 143
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 993453f24e7f31c4ea900caefd91a5cb
+      internalID: -473161608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fail_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 119
+        width: 143
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efa6830a86f0c7c47b683df8548f3da0
+      internalID: 509197896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fail_5
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 119
+        width: 143
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94f96c5edab1c2247be9a7d1918beb4d
+      internalID: -411480230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fail_6
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 119
+        width: 143
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 811403f7e555ae64780fc83f4a1e834e
+      internalID: -742638927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fail_7
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 119
+        width: 143
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0065510e6fe4d954eb18c64a36c8ab97
+      internalID: 738462115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fail_8
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 640
-        height: 640
+        width: 143
+        height: 119
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a3b6cbf598fcf884a8d2d484403c90f1
-      internalID: 1320629557
+      spriteID: ff3580c042db2354d89a3b7b246e0abc
+      internalID: 726419564
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: anuncios podridos_3
+      name: fail_9
       rect:
         serializedVersion: 2
-        x: 640
+        x: 143
         y: 0
-        width: 640
-        height: 640
+        width: 143
+        height: 119
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9db5778623358cf459e305dd3d5eefc5
-      internalID: 556315413
+      spriteID: 4fb4e211a9b0d7142825e0e845619020
+      internalID: -1605398976
       vertices: []
       indices: 
       edges: []
@@ -204,10 +330,16 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      anuncios podridos_0: -935118527
-      anuncios podridos_1: 2066241914
-      anuncios podridos_2: 1320629557
-      anuncios podridos_3: 556315413
+      fail_0: 823284291
+      fail_1: -474594640
+      fail_2: -521865999
+      fail_3: -473161608
+      fail_4: 509197896
+      fail_5: -411480230
+      fail_6: -742638927
+      fail_7: 738462115
+      fail_8: 726419564
+      fail_9: -1605398976
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

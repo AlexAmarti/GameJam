@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c25da90e7a71e8847bc4fdc11735422f
+guid: 9dc59ac2a0bb8774c83fa5f4d4f13fe9
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -69,7 +69,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -110,85 +110,64 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: anuncios podridos_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 640
-        width: 640
-        height: 640
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4cd14a51450c3194185bcb46ce3589ec
-      internalID: -935118527
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: anuncios podridos_1
-      rect:
-        serializedVersion: 2
-        x: 640
-        y: 640
-        width: 640
-        height: 640
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 576d2d48e2eddb1478730d9eebe427e8
-      internalID: 2066241914
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: anuncios podridos_2
+      name: shoot_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 640
-        height: 640
+        width: 3200
+        height: 1800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a3b6cbf598fcf884a8d2d484403c90f1
-      internalID: 1320629557
+      spriteID: a755de3ed7e200a48a278b1573c77f8e
+      internalID: -1990560104
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: anuncios podridos_3
+      name: shoot_1
       rect:
         serializedVersion: 2
-        x: 640
+        x: 3200
         y: 0
-        width: 640
-        height: 640
+        width: 3200
+        height: 1800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9db5778623358cf459e305dd3d5eefc5
-      internalID: 556315413
+      spriteID: 33ec7cec9ca99b34c9dfa45e9e081830
+      internalID: -626904837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shoot_2
+      rect:
+        serializedVersion: 2
+        x: 6400
+        y: 0
+        width: 3200
+        height: 1800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 969e463e3407eb748b7304bd253364ea
+      internalID: 1511992764
       vertices: []
       indices: 
       edges: []
@@ -204,10 +183,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      anuncios podridos_0: -935118527
-      anuncios podridos_1: 2066241914
-      anuncios podridos_2: 1320629557
-      anuncios podridos_3: 556315413
+      shoot_0: -1990560104
+      shoot_1: -626904837
+      shoot_2: 1511992764
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

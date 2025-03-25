@@ -15,8 +15,10 @@ public class Items : MonoBehaviour
     }
 
     public Item[] items; // Lista de objetos a mostrar
-    public GameObject itemPrefab; // Prefab para mostrar cada ítem
-    public Transform parentContainer; // Contenedor donde se instanciarán los ítems
+    public GameObject itemPrefab; // Prefab para cada ítem (Panel con Imagen y Descripción)
+    public GameObject buttonPrefab; // Prefab para cada botón
+    public Transform parentContainer; // Contenedor de los ítems
+    public Transform buttonContainer; // Contenedor de los botones
 
     void Start()
     {
@@ -25,12 +27,27 @@ public class Items : MonoBehaviour
 
     void GenerateItems()
     {
-        foreach (Item item in items)
+        for (int i = 0; i < items.Length; i++)
         {
-            GameObject newItem = Instantiate(itemPrefab, parentContainer); // Instancia el prefab
-            newItem.transform.Find("ItemImage").GetComponent<Image>().sprite = item.image;
-            newItem.transform.Find("ItemName").GetComponent<TMP_Text>().text = item.name;
-            newItem.transform.Find("ItemDescription").GetComponent<TMP_Text>().text = item.description;
+            int index = i; // Necesario para evitar problemas de referencia en lambdas
+
+            // Instancia el ítem (imagen + descripción)
+            GameObject newItem = Instantiate(itemPrefab, parentContainer);
+            newItem.transform.Find("ItemImage").GetComponent<Image>().sprite = items[i].image;
+            newItem.transform.Find("ItemName").GetComponent<TMP_Text>().text = items[i].name;
+            newItem.transform.Find("ItemDescription").GetComponent<TMP_Text>().text = items[i].description;
+
+            // Instancia el botón
+            GameObject newButton = Instantiate(buttonPrefab, buttonContainer);
+            newButton.GetComponentInChildren<TMP_Text>().text = items[i].name;
+
+            // Asigna evento al botón para mostrar el ítem al hacer clic
+            newButton.GetComponent<Button>().onClick.AddListener(() => ShowItem(index));
         }
+    }
+
+    void ShowItem(int index)
+    {
+        Debug.Log("Seleccionaste: " + items[index].name);
     }
 }

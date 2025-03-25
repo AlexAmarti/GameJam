@@ -23,7 +23,7 @@ public class PowerUpHover : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
         image.color = hoverColor; // Cambia el color a normal
         if (animator != null)
         {
-            animator.SetBool("Hover", true); // Activa la animación
+            animator.SetBool("isHovered", true); // Activa la animación de hover
         }
     }
 
@@ -32,7 +32,7 @@ public class PowerUpHover : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
         image.color = defaultColor; // Regresa a gris cuando se sale
         if (animator != null)
         {
-            animator.SetBool("Hover", false); // Detiene la animación
+            animator.SetBool("isHovered", false); // Desactiva la animación de hover
         }
     }
 }

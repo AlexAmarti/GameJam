@@ -17,7 +17,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CREDITOS.unity
     guid: 6cd56f11762421142a2f817e9de9ba35
-  - enabled: 1
-    path: Assets/Scenes/ESCENA Josy.unity
-    guid: f9cfafa4e22cd1a4185a7280d28db173
   m_configObjects: {}

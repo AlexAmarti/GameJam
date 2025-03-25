@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement; // Importar SceneManagement para cambiar de escena
+using UnityEngine.SceneManagement;
 
 public class Contador : MonoBehaviour
 {
@@ -28,6 +28,8 @@ public class Contador : MonoBehaviour
     float maxReactionTime = 1f;
     float penaltyTime = 0.5f;
 
+    bool roundEnded = false;
+
     void Start()
     {
         SetNewRandomTime();
@@ -35,6 +37,13 @@ public class Contador : MonoBehaviour
 
     void Update()
     {
+        // Si la ronda terminó, esperar que el jugador presione ENTER para cargar la tienda
+        if (roundEnded && Input.GetKeyDown(KeyCode.Return))
+        {
+            LoadShopScene();
+            return; // Salir del Update para evitar procesar más lógica
+        }
+
         // Fase antes de la señal
         if (!hasTriggered)
         {
@@ -98,23 +107,23 @@ public class Contador : MonoBehaviour
                 if (player1Reacted && !player2Reacted && Time.time - reactionStartTime >= maxReactionTime)
                 {
                     Debug.Log("JUGADOR 2 no reaccionó a tiempo. JUGADOR 1 gana la ronda.");
-                    LoadShopScene();
+                    EndRound();
                 }
                 else if (player2Reacted && !player1Reacted && Time.time - reactionStartTime >= maxReactionTime)
                 {
                     Debug.Log("JUGADOR 1 no reaccionó a tiempo. JUGADOR 2 gana la ronda.");
-                    LoadShopScene();
+                    EndRound();
                 }
                 else if (player1Reacted && player2Reacted)
                 {
                     DetermineWinner();
-                    LoadShopScene();
+                    EndRound();
                 }
             }
             else if (Time.time - reactionStartTime >= maxReactionTime)
             {
                 Debug.Log("Ningún jugador reaccionó a tiempo. Nueva ronda.");
-                LoadShopScene();
+                EndRound();
             }
         }
     }
@@ -129,7 +138,6 @@ public class Contador : MonoBehaviour
             Debug.Log("¡Empate!");
     }
 
-    // Nueva función que carga la escena "TIENDA"
     void LoadShopScene()
     {
         Debug.Log("Cargando la tienda...");
@@ -140,5 +148,14 @@ public class Contador : MonoBehaviour
     {
         randomTime = Random.Range(minTime, maxTime);
         Debug.Log("Nuevo tiempo aleatorio: " + randomTime.ToString("F0") + " segundos");
+    }
+
+    void EndRound()
+    {
+        if (!roundEnded)
+        {
+            roundEnded = true;
+            Debug.Log("Ronda finalizada. Presiona ENTER para ir a la tienda.");
+        }
     }
 }

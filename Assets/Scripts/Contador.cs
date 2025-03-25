@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Contador : MonoBehaviour
 {
@@ -30,34 +31,37 @@ public class Contador : MonoBehaviour
 
     bool roundEnded = false;
 
+    public Animator animatorPlayer1; // Animator del Jugador 1
+    public Animator animatorPlayer2; // Animator del Jugador 2
+    public Image signalImage; // Imagen que se mostrará en el Canvas
+
     void Start()
     {
         SetNewRandomTime();
+
+        // Ocultar la imagen al inicio
+        if (signalImage != null)
+            signalImage.gameObject.SetActive(false);
     }
 
     void Update()
     {
-        // Si la ronda terminó, esperar que el jugador presione ENTER para cargar la tienda
         if (roundEnded && Input.GetKeyDown(KeyCode.Return))
         {
             LoadShopScene();
-            return; // Salir del Update para evitar procesar más lógica
+            return;
         }
 
-        // Fase antes de la señal
         if (!hasTriggered)
         {
             timer += Time.deltaTime;
-            Debug.Log("Tiempo: " + timer.ToString("F0"));
 
-            // Desbloqueo si ya pasó la penalización
             if (player1Blocked && Time.time >= player1UnblockTime)
                 player1Blocked = false;
 
             if (player2Blocked && Time.time >= player2UnblockTime)
                 player2Blocked = false;
 
-            // Reacción temprana - penalización
             if (!player1Blocked && Input.GetKeyDown(KeyCode.Space))
             {
                 player1Blocked = true;
@@ -72,46 +76,58 @@ public class Contador : MonoBehaviour
                 Debug.Log("JUGADOR 2 PRESIONÓ ANTES DE TIEMPO. Penalización de 0.5 segundos.");
             }
 
-            // Señal de reacción
             if (timer >= randomTime)
             {
                 hasTriggered = true;
                 reactionStartTime = Time.time;
                 player1Reacted = false;
                 player2Reacted = false;
-                Debug.Log("¡PULSA ESPACIO (Jugador 1) o HAZ CLIC (Jugador 2)!");
+
+                // Mostrar la imagen en pantalla
+                if (signalImage != null)
+                    signalImage.gameObject.SetActive(true);
+
+                Debug.Log("¡SEÑAL MOSTRADA! Reacciona ahora.");
             }
         }
-        // Fase de reacción
         else
         {
-            // Reacción jugador 1
             if (!player1Reacted && !player1Blocked && Input.GetKeyDown(KeyCode.Space))
             {
                 player1ReactionTime = Time.time - reactionStartTime;
                 player1Reacted = true;
+
+                // Activar animación de disparo del Jugador 1
+                if (animatorPlayer1 != null)
+                    animatorPlayer1.SetTrigger("Shoot");
+
                 Debug.Log("JUGADOR 1 reaccionó en: " + player1ReactionTime.ToString("F3") + " segundos");
             }
 
-            // Reacción jugador 2
             if (!player2Reacted && !player2Blocked && Input.GetMouseButtonDown(0))
             {
                 player2ReactionTime = Time.time - reactionStartTime;
                 player2Reacted = true;
+
+                // Activar animación de disparo del Jugador 2
+                if (animatorPlayer2 != null)
+                    animatorPlayer2.SetTrigger("Shoot");
+
                 Debug.Log("JUGADOR 2 reaccionó en: " + player2ReactionTime.ToString("F3") + " segundos");
             }
 
-            // Evaluar resultados
             if (player1Reacted || player2Reacted)
             {
                 if (player1Reacted && !player2Reacted && Time.time - reactionStartTime >= maxReactionTime)
                 {
                     Debug.Log("JUGADOR 2 no reaccionó a tiempo. JUGADOR 1 gana la ronda.");
+                    ActivateDeathAnimation(2);
                     EndRound();
                 }
                 else if (player2Reacted && !player1Reacted && Time.time - reactionStartTime >= maxReactionTime)
                 {
                     Debug.Log("JUGADOR 1 no reaccionó a tiempo. JUGADOR 2 gana la ronda.");
+                    ActivateDeathAnimation(1);
                     EndRound();
                 }
                 else if (player1Reacted && player2Reacted)
@@ -131,11 +147,37 @@ public class Contador : MonoBehaviour
     void DetermineWinner()
     {
         if (player1ReactionTime < player2ReactionTime)
+        {
             Debug.Log("JUGADOR 1 gana la ronda.");
+            ActivateDeathAnimation(2);
+        }
         else if (player2ReactionTime < player1ReactionTime)
+        {
             Debug.Log("JUGADOR 2 gana la ronda.");
+            ActivateDeathAnimation(1);
+        }
         else
+        {
             Debug.Log("¡Empate!");
+        }
+    }
+
+    void ActivateDeathAnimation(int losingPlayer)
+    {
+        if (losingPlayer == 1)
+        {
+            if (animatorPlayer1 != null)
+                animatorPlayer1.SetTrigger("Death");
+
+            Debug.Log("Activando animación de muerte para JUGADOR 1");
+        }
+        else if (losingPlayer == 2)
+        {
+            if (animatorPlayer2 != null)
+                animatorPlayer2.SetTrigger("Death");
+
+            Debug.Log("Activando animación de muerte para JUGADOR 2");
+        }
     }
 
     void LoadShopScene()

@@ -6,48 +6,41 @@ using TMPro;
 
 public class Items : MonoBehaviour
 {
-    [System.Serializable]
-    public class Item
-    {
-        public string name; // Nombre del objeto
-        [TextArea] public string description; // Descripción del objeto
-        public Sprite image; // Imagen del objeto
-    }
+    [Header("Referencia a Componentes UI")]
+    public Text nombreText;  // Campo de texto para el nombre
+    public Text descripcionText;  // Campo de texto para la descripción
+    public Image iconoImage;  // Imagen del ítem
 
-    public Item[] items; // Lista de objetos a mostrar
-    public GameObject itemPrefab; // Prefab para cada ítem (Panel con Imagen y Descripción)
-    public GameObject buttonPrefab; // Prefab para cada botón
-    public Transform parentContainer; // Contenedor de los ítems
-    public Transform buttonContainer; // Contenedor de los botones
+    [Header("Datos del Ítem")]
+    public string nombre;
+    [TextArea] public string descripcion;
+    public Sprite icono;
 
     void Start()
     {
-        GenerateItems();
+        // Actualiza los valores en la UI al iniciar
+        ActualizarUI();
     }
 
-    void GenerateItems()
+    public void ActualizarUI()
     {
-        for (int i = 0; i < items.Length; i++)
-        {
-            int index = i; // Necesario para evitar problemas de referencia en lambdas
+        if (nombreText != null)
+            nombreText.text = nombre;
 
-            // Instancia el ítem (imagen + descripción)
-            GameObject newItem = Instantiate(itemPrefab, parentContainer);
-            newItem.transform.Find("ItemImage").GetComponent<Image>().sprite = items[i].image;
-            newItem.transform.Find("ItemName").GetComponent<TMP_Text>().text = items[i].name;
-            newItem.transform.Find("ItemDescription").GetComponent<TMP_Text>().text = items[i].description;
+        if (descripcionText != null)
+            descripcionText.text = descripcion;
 
-            // Instancia el botón
-            GameObject newButton = Instantiate(buttonPrefab, buttonContainer);
-            newButton.GetComponentInChildren<TMP_Text>().text = items[i].name;
-
-            // Asigna evento al botón para mostrar el ítem al hacer clic
-            newButton.GetComponent<Button>().onClick.AddListener(() => ShowItem(index));
-        }
+        if (iconoImage != null)
+            iconoImage.sprite = icono;
     }
 
-    void ShowItem(int index)
+    // Método para cambiar los valores dinámicamente desde otro script
+    public void ConfigurarItem(string nuevoNombre, string nuevaDescripcion, Sprite nuevoIcono)
     {
-        Debug.Log("Seleccionaste: " + items[index].name);
+        nombre = nuevoNombre;
+        descripcion = nuevaDescripcion;
+        icono = nuevoIcono;
+
+        ActualizarUI();
     }
 }

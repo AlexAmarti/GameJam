@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement; // Importar SceneManagement para cambiar de escena
 
 public class Contador : MonoBehaviour
 {
@@ -10,8 +11,6 @@ public class Contador : MonoBehaviour
     int maxTime = 45;
 
     public bool hasTriggered = false;
-    bool waitingForKey = false;
-    bool waitingForRestart = false;
 
     float reactionStartTime;
     float player1ReactionTime;
@@ -36,16 +35,6 @@ public class Contador : MonoBehaviour
 
     void Update()
     {
-        if (waitingForRestart)
-        {
-            if (Input.GetKeyDown(KeyCode.Q))
-            {
-                Debug.Log("Nueva ronda iniciada.");
-                StartNewRound();
-            }
-            return;
-        }
-
         // Fase antes de la señal
         if (!hasTriggered)
         {
@@ -78,16 +67,14 @@ public class Contador : MonoBehaviour
             if (timer >= randomTime)
             {
                 hasTriggered = true;
-                waitingForKey = true;
                 reactionStartTime = Time.time;
                 player1Reacted = false;
                 player2Reacted = false;
                 Debug.Log("¡PULSA ESPACIO (Jugador 1) o HAZ CLIC (Jugador 2)!");
             }
         }
-
         // Fase de reacción
-        else if (waitingForKey)
+        else
         {
             // Reacción jugador 1
             if (!player1Reacted && !player1Blocked && Input.GetKeyDown(KeyCode.Space))
@@ -111,23 +98,23 @@ public class Contador : MonoBehaviour
                 if (player1Reacted && !player2Reacted && Time.time - reactionStartTime >= maxReactionTime)
                 {
                     Debug.Log("JUGADOR 2 no reaccionó a tiempo. JUGADOR 1 gana la ronda.");
-                    WaitForNextRound();
+                    LoadShopScene();
                 }
                 else if (player2Reacted && !player1Reacted && Time.time - reactionStartTime >= maxReactionTime)
                 {
                     Debug.Log("JUGADOR 1 no reaccionó a tiempo. JUGADOR 2 gana la ronda.");
-                    WaitForNextRound();
+                    LoadShopScene();
                 }
                 else if (player1Reacted && player2Reacted)
                 {
                     DetermineWinner();
-                    WaitForNextRound();
+                    LoadShopScene();
                 }
             }
             else if (Time.time - reactionStartTime >= maxReactionTime)
             {
                 Debug.Log("Ningún jugador reaccionó a tiempo. Nueva ronda.");
-                WaitForNextRound();
+                LoadShopScene();
             }
         }
     }
@@ -142,26 +129,16 @@ public class Contador : MonoBehaviour
             Debug.Log("¡Empate!");
     }
 
-    void WaitForNextRound()
+    // Nueva función que carga la escena "TIENDA"
+    void LoadShopScene()
     {
-        waitingForKey = false;
-        waitingForRestart = true;
-        Debug.Log("Presiona 'Q' para iniciar una nueva ronda.");
-    }
-
-    void StartNewRound()
-    {
-        waitingForRestart = false;
-        hasTriggered = false;
-        timer = 0f;
-        player1Blocked = false;
-        player2Blocked = false;
-        SetNewRandomTime();
+        Debug.Log("Cargando la tienda...");
+        SceneManager.LoadScene("TIENDA");
     }
 
     void SetNewRandomTime()
     {
         randomTime = Random.Range(minTime, maxTime);
-        Debug.Log("Nuevo tiempo aleatorio: " + randomTime.ToString("F2") + " segundos");
+        Debug.Log("Nuevo tiempo aleatorio: " + randomTime.ToString("F0") + " segundos");
     }
 }

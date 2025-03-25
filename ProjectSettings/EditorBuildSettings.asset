@@ -8,4 +8,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GENERAL.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/ESCENA Josy.unity
+    guid: f9cfafa4e22cd1a4185a7280d28db173
+  - enabled: 1
+    path: Assets/Scenes/TIENDA.unity
+    guid: 595c15f6fba3f0e439288e128d6e1c1c
   m_configObjects: {}

@@ -1,0 +1,901 @@
+fileFormatVersion: 2
+guid: 4fbe958bf76de864b9c47e04662a1885
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: tortuga spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6000
+        width: 1600
+        height: 1200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34bcb00cf6b5e96488a308787a84f95a
+      internalID: -1753626297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tortuga spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 6000
+        width: 1600
+        height: 1200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c01ba91ceea30a46be34cb4b4451b2d
+      internalID: 1146660643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tortuga spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 3200
+        y: 6000
+        width: 1600
+        height: 1200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34291d1dadc20cd43b82f01a1c7b03bc
+      internalID: -1129683997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tortuga spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 6000
+        width: 1600
+        height: 1200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58b081064e7e39d49a74ee504ce058d3
+      internalID: 3253100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tortuga spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 6400
+        y: 6000
+        width: 1600
+        height: 1200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00afcee2e42469f499eb17e677284264
+      internalID: 1902004308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tortuga spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 8000
+        y: 6000
+        width: 1600
+        height: 1200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: feda7741af00fc747982ddec5488cbfa
+      internalID: 137758511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tortuga spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4800
+        width: 1600
+        height: 1200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cf3f45159a9afb4eba6d27a65859ccf
+      internalID: 291693243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tortuga spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 4800
+        width: 1600
+        height: 1200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a71fe90f87b82c4daaf59546ee6d9cf
+      internalID: 1661831891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tortuga spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 3200
+        y: 4800
+        width: 1600
+        height: 1200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa013bfd319f45047ab10603b5e3020a
+      internalID: 889822704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tortuga spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 4800
+        width: 1600
+        height: 1200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd72746eedf19c647b89cf22b41abd89
+      internalID: 742073209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tortuga spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 6400
+        y: 4800
+        width: 1600
+        height: 1200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81793eac50a6523439e5ab0139d3377a
+      internalID: 1260058641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tortuga spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 8000
+        y: 4800
+        width: 1600
+        height: 1200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39698091221ca0b46b0fe0f069b1d7cb
+      internalID: 672826285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tortuga spritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3600
+        width: 1600
+        height: 1200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdf460439f78bc440846265eea858e16
+      internalID: 926364083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tortuga spritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 3600
+        width: 1600
+        height: 1200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6744c89d34a2a6d48a213919a658d378
+      internalID: -1663969257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tortuga spritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 3200
+        y: 3600
+        width: 1600
+        height: 1200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6886ac9f1e8cc2348b278e9d7b15d698
+      internalID: 1936208808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tortuga spritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 3600
+        width: 1600
+        height: 1200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23185994032e8c44f90fcfb56f9e7baf
+      internalID: 10010239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tortuga spritesheet_16
+      rect:
+        serializedVersion: 2
+        x: 6400
+        y: 3600
+        width: 1600
+        height: 1200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09a8909b97bbb3a47a93d865c8ff52f1
+      internalID: -2029786618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tortuga spritesheet_17
+      rect:
+        serializedVersion: 2
+        x: 8000
+        y: 3600
+        width: 1600
+        height: 1200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3ad22ada2dfae74d8526024b3ce8014
+      internalID: -1972483396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tortuga spritesheet_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2400
+        width: 1600
+        height: 1200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a154e2662e642b44dac85e1f498a2860
+      internalID: 764898221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tortuga spritesheet_19
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 2400
+        width: 1600
+        height: 1200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d88e357d8d8975a40a65a6fda3d307d9
+      internalID: 1538769731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tortuga spritesheet_20
+      rect:
+        serializedVersion: 2
+        x: 3200
+        y: 2400
+        width: 1600
+        height: 1200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7a383d40d7785f40b77d4e10164104a
+      internalID: -195291673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tortuga spritesheet_21
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 2400
+        width: 1600
+        height: 1200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a08b788f13d5576499cebb3fa82291cf
+      internalID: -704207300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tortuga spritesheet_22
+      rect:
+        serializedVersion: 2
+        x: 6400
+        y: 2400
+        width: 1600
+        height: 1200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b99b1b82ecf085409888f3cdff481de
+      internalID: -1243905732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tortuga spritesheet_23
+      rect:
+        serializedVersion: 2
+        x: 8000
+        y: 2400
+        width: 1600
+        height: 1200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b26e09ab71cf6a34c9ca1058beab4d9b
+      internalID: 1715042847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tortuga spritesheet_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1200
+        width: 1600
+        height: 1200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d12e5975c84b0424da9d9572c3a35df2
+      internalID: 873388304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tortuga spritesheet_25
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 1200
+        width: 1600
+        height: 1200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d363a144ee40a94fb04e756f395702c
+      internalID: -1763583456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tortuga spritesheet_26
+      rect:
+        serializedVersion: 2
+        x: 3200
+        y: 1200
+        width: 1600
+        height: 1200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96188ae1ae398124fa9b173a425a8f7d
+      internalID: 1423198792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tortuga spritesheet_27
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 1200
+        width: 1600
+        height: 1200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcd8a305476123a4184d7df2a80d8441
+      internalID: 511400722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tortuga spritesheet_28
+      rect:
+        serializedVersion: 2
+        x: 6400
+        y: 1200
+        width: 1600
+        height: 1200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85dfd8350949ec248880f9d02c3255b2
+      internalID: 1154863234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tortuga spritesheet_29
+      rect:
+        serializedVersion: 2
+        x: 8000
+        y: 1200
+        width: 1600
+        height: 1200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c37cd3807f3c2704f849a4943b503901
+      internalID: -2073991869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tortuga spritesheet_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1600
+        height: 1200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4389f2cfe4d333d44a77df5c86407f03
+      internalID: 1629449446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tortuga spritesheet_31
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 0
+        width: 1600
+        height: 1200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f64c2613f3f13454aa11ffcde17d20d6
+      internalID: 1016553744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tortuga spritesheet_32
+      rect:
+        serializedVersion: 2
+        x: 3200
+        y: 0
+        width: 1600
+        height: 1200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c847aa6bd77a15e428288aa432bcfedd
+      internalID: -1287970944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tortuga spritesheet_33
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 0
+        width: 1600
+        height: 1200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db8e24f1820b3b4458fdf64b357f3511
+      internalID: 2039754315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      tortuga spritesheet_0: -1753626297
+      tortuga spritesheet_1: 1146660643
+      tortuga spritesheet_10: 1260058641
+      tortuga spritesheet_11: 672826285
+      tortuga spritesheet_12: 926364083
+      tortuga spritesheet_13: -1663969257
+      tortuga spritesheet_14: 1936208808
+      tortuga spritesheet_15: 10010239
+      tortuga spritesheet_16: -2029786618
+      tortuga spritesheet_17: -1972483396
+      tortuga spritesheet_18: 764898221
+      tortuga spritesheet_19: 1538769731
+      tortuga spritesheet_2: -1129683997
+      tortuga spritesheet_20: -195291673
+      tortuga spritesheet_21: -704207300
+      tortuga spritesheet_22: -1243905732
+      tortuga spritesheet_23: 1715042847
+      tortuga spritesheet_24: 873388304
+      tortuga spritesheet_25: -1763583456
+      tortuga spritesheet_26: 1423198792
+      tortuga spritesheet_27: 511400722
+      tortuga spritesheet_28: 1154863234
+      tortuga spritesheet_29: -2073991869
+      tortuga spritesheet_3: 3253100
+      tortuga spritesheet_30: 1629449446
+      tortuga spritesheet_31: 1016553744
+      tortuga spritesheet_32: -1287970944
+      tortuga spritesheet_33: 2039754315
+      tortuga spritesheet_4: 1902004308
+      tortuga spritesheet_5: 137758511
+      tortuga spritesheet_6: 291693243
+      tortuga spritesheet_7: 1661831891
+      tortuga spritesheet_8: 889822704
+      tortuga spritesheet_9: 742073209
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

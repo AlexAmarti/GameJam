@@ -6,9 +6,9 @@ using UnityEngine.UI;
 
 public class Contador : MonoBehaviour
 {
-    public string nombreDeEscena = "TIENDA"; // Puedes cambiar esto en el Inspector
-    private bool escenaListaParaCargar = false; // Indica si la ronda terminó
-
+    public string nombreDeEscena = "TIENDA";
+    private bool escenaListaParaCargar = false;
+    private bool mensajeMostrado = false;
 
     float timer = 0f;
     float randomTime;
@@ -35,28 +35,21 @@ public class Contador : MonoBehaviour
 
     bool roundEnded = false;
 
-
-    //public GameObject player1Idle;
-    //public GameObject player1Shoot;
-    //public GameObject player1Death;
-
     public GameObject player2Idle;
     public GameObject player2Shoot;
     public GameObject player2Death;
 
-    public Transform objetoAMover;  // Asigna este objeto en el Inspector
-
+    public Transform objetoAMover;
 
     void Start()
     {
         SetNewRandomTime();
-
         SetIdleAnimation();
     }
 
     void Update()
     {
-        if (roundEnded && Input.GetKeyDown(KeyCode.Return))
+        if (escenaListaParaCargar && Input.GetKeyDown(KeyCode.Return))
         {
             LoadShopScene();
             return;
@@ -86,14 +79,13 @@ public class Contador : MonoBehaviour
                 Debug.Log("JUGADOR 2 PRESIONÓ ANTES DE TIEMPO. Penalización de 0.5 segundos.");
             }
 
-            if (timer >= randomTime)  
+            if (timer >= randomTime)
             {
                 hasTriggered = true;
                 reactionStartTime = Time.time;
                 player1Reacted = false;
                 player2Reacted = false;
 
-                // Cambiar la posición Z del objeto
                 if (objetoAMover != null)
                 {
                     Vector3 nuevaPosicion = objetoAMover.position;
@@ -103,7 +95,6 @@ public class Contador : MonoBehaviour
 
                 Debug.Log("¡SEÑAL MOSTRADA! Reacciona ahora.");
             }
-
         }
         else
         {
@@ -112,7 +103,6 @@ public class Contador : MonoBehaviour
                 player1ReactionTime = Time.time - reactionStartTime;
                 player1Reacted = true;
                 ActivateShootAnimation(1);
-                Debug.Log("JUGADOR 1 reaccionó en: " + player1ReactionTime.ToString("F3") + " segundos");
             }
 
             if (!player2Reacted && !player2Blocked && Input.GetMouseButtonDown(0))
@@ -120,87 +110,85 @@ public class Contador : MonoBehaviour
                 player2ReactionTime = Time.time - reactionStartTime;
                 player2Reacted = true;
                 ActivateShootAnimation(2);
-                Debug.Log("JUGADOR 2 reaccionó en: " + player2ReactionTime.ToString("F3") + " segundos");
             }
 
-            if (player1Reacted || player2Reacted)
+            if ((player1Reacted || player2Reacted) && !mensajeMostrado)
             {
-                if (player1Reacted && !player2Reacted && Time.time - reactionStartTime >= maxReactionTime)
-                {
-                    Debug.Log("JUGADOR 2 no reaccionó a tiempo. JUGADOR 1 gana la ronda.");
-                    ActivateDeathAnimation(2);
-                    EndRound();
-                }
-                else if (player2Reacted && !player1Reacted && Time.time - reactionStartTime >= maxReactionTime)
-                {
-                    Debug.Log("JUGADOR 1 no reaccionó a tiempo. JUGADOR 2 gana la ronda.");
-                    ActivateDeathAnimation(1);
-                    EndRound();
-                }
-                else if (player1Reacted && player2Reacted)
-                {
-                    DetermineWinner();
-                    EndRound();
-                }
-            }
-            else if (Time.time - reactionStartTime >= maxReactionTime)
-            {
-                Debug.Log("Ningún jugador reaccionó a tiempo. Nueva ronda.");
                 DetermineWinner();
-                EndRound();
             }
-        }
-        if (escenaListaParaCargar && Input.GetKeyDown(KeyCode.Return))
-        {
-            Debug.Log("Cargando la escena: " + nombreDeEscena);
-            SceneManager.LoadScene(nombreDeEscena); // Cambia de escena cuando se presiona "Enter"
         }
     }
 
     void DetermineWinner()
     {
+        if (mensajeMostrado) return;
+
+        // 1. Mensaje de diferencia de reacción del Jugador 1
+        Debug.Log("Tiempo de reacción del JUGADOR 1: " + player1ReactionTime.ToString("F3") + " segundos");
+
+        // 2. Mensaje de diferencia de reacción del Jugador 2
+        Debug.Log("Tiempo de reacción del JUGADOR 2: " + player2ReactionTime.ToString("F3") + " segundos");
+
+        // Determina el ganador y activa la animación de muerte del perdedor
         if (player1ReactionTime < player2ReactionTime)
         {
-            Debug.Log("JUGADOR 1 gana la ronda.");
+            // 3. Mensaje del ganador
+            Debug.Log("JUGADOR 1 GANA LA RONDA");
+
+            // 4. Mensaje de animación de muerte del perdedor (Jugador 2)
             ActivateDeathAnimation(2);
         }
         else if (player2ReactionTime < player1ReactionTime)
         {
-            Debug.Log("JUGADOR 2 gana la ronda.");
+            Debug.Log("JUGADOR 2 GANA LA RONDA");
             ActivateDeathAnimation(1);
         }
         else
         {
-            Debug.Log("¡Empate!");
+            Debug.Log("¡Empate! Nadie gana esta ronda.");
         }
 
-        EndRound(); // Marcar la ronda como finalizada
+        // 5. Mensaje de pulsar Enter para continuar
+        Debug.Log("Presiona ENTER para continuar...");
+
+        EndRound();
+        mensajeMostrado = true;
     }
 
     void ActivateDeathAnimation(int losingPlayer)
     {
         if (losingPlayer == 1)
         {
-            SetActivePlayerState(1, false, false, true);
-            Debug.Log("Activando animación de muerte para JUGADOR 1");
+            Animator anim = player2Death.GetComponent<Animator>();
+            if (anim != null)
+            {
+                anim.Play("DeathAnimation");
+                Debug.Log("Animación de muerte para JUGADOR 1");
+            }
         }
         else if (losingPlayer == 2)
         {
-            SetActivePlayerState(2, false, false, true);
-            Debug.Log("Activando animación de muerte para JUGADOR 2");
+            Animator anim = player2Death.GetComponent<Animator>();
+            if (anim != null)
+            {
+                anim.Play("DeathAnimation");
+                Debug.Log("Animación de muerte para JUGADOR 2");
+            }
         }
+
+        escenaListaParaCargar = true;
     }
+
 
     void LoadShopScene()
     {
-        Debug.Log("Cargando la tienda...");
-        SceneManager.LoadScene("TIENDA");
+        Debug.Log("Cambiando a la tienda...");
+        SceneManager.LoadScene(nombreDeEscena);
     }
 
     void SetNewRandomTime()
     {
         randomTime = Random.Range(minTime, maxTime);
-        Debug.Log("Nuevo tiempo aleatorio: " + randomTime.ToString("F0") + " segundos");
     }
 
     void EndRound()
@@ -208,11 +196,9 @@ public class Contador : MonoBehaviour
         if (!roundEnded)
         {
             roundEnded = true;
-            escenaListaParaCargar = true; // Habilita el cambio de escena con "Enter"
-            Debug.Log("Ronda finalizada. Presiona ENTER para continuar...");
+            escenaListaParaCargar = true;
         }
     }
-
 
     void SetIdleAnimation()
     {
@@ -227,17 +213,25 @@ public class Contador : MonoBehaviour
 
     void SetActivePlayerState(int player, bool idle, bool shoot, bool death)
     {
-        if (player == 1)
-        {
-            //player1Idle.SetActive(idle);
-            //player1Shoot.SetActive(shoot);
-            //player1Death.SetActive(death);
-        }
-        else if (player == 2)
-        {
+       if (player == 2)
+       {
             player2Idle.SetActive(idle);
             player2Shoot.SetActive(shoot);
             player2Death.SetActive(death);
+
+            Debug.Log($"Jugador 2 - Idle: {idle}, Shoot: {shoot}, Death: {death}");
         }
+        //if (player == 1)
+        //{
+        //    //player1Idle.SetActive(idle);
+        //    //player1Shoot.SetActive(shoot);
+        //    //player1Death.SetActive(death);
+        //}
+        //else if (player == 2)
+        //{
+        //    player2Idle.SetActive(idle);
+        //    player2Shoot.SetActive(shoot);
+        //    player2Death.SetActive(death);
+        //}
     }
 }

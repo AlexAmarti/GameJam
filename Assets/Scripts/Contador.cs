@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
 public class Contador : MonoBehaviour
 {
@@ -123,32 +122,27 @@ public class Contador : MonoBehaviour
     {
         if (mensajeMostrado) return;
 
-        // 1. Mensaje de diferencia de reacción del Jugador 1
+        // Mensajes de tiempo de reacción de ambos jugadores
         Debug.Log("Tiempo de reacción del JUGADOR 1: " + player1ReactionTime.ToString("F3") + " segundos");
-
-        // 2. Mensaje de diferencia de reacción del Jugador 2
         Debug.Log("Tiempo de reacción del JUGADOR 2: " + player2ReactionTime.ToString("F3") + " segundos");
 
         // Determina el ganador y activa la animación de muerte del perdedor
         if (player1ReactionTime < player2ReactionTime)
         {
-            // 3. Mensaje del ganador
             Debug.Log("JUGADOR 1 GANA LA RONDA");
-
-            // 4. Mensaje de animación de muerte del perdedor (Jugador 2)
-            ActivateDeathAnimation(2);
+            ActivateDeathAnimation(2); // Jugador 2 pierde
         }
         else if (player2ReactionTime < player1ReactionTime)
         {
             Debug.Log("JUGADOR 2 GANA LA RONDA");
-            ActivateDeathAnimation(1);
+            ActivateDeathAnimation(1); // Jugador 1 pierde
         }
         else
         {
             Debug.Log("¡Empate! Nadie gana esta ronda.");
         }
 
-        // 5. Mensaje de pulsar Enter para continuar
+        // Mensaje de instrucciones para continuar
         Debug.Log("Presiona ENTER para continuar...");
 
         EndRound();
@@ -178,7 +172,6 @@ public class Contador : MonoBehaviour
 
         escenaListaParaCargar = true;
     }
-
 
     void LoadShopScene()
     {
@@ -213,25 +206,13 @@ public class Contador : MonoBehaviour
 
     void SetActivePlayerState(int player, bool idle, bool shoot, bool death)
     {
-       if (player == 2)
-       {
+        if (player == 2)
+        {
             player2Idle.SetActive(idle);
             player2Shoot.SetActive(shoot);
             player2Death.SetActive(death);
 
             Debug.Log($"Jugador 2 - Idle: {idle}, Shoot: {shoot}, Death: {death}");
         }
-        //if (player == 1)
-        //{
-        //    //player1Idle.SetActive(idle);
-        //    //player1Shoot.SetActive(shoot);
-        //    //player1Death.SetActive(death);
-        //}
-        //else if (player == 2)
-        //{
-        //    player2Idle.SetActive(idle);
-        //    player2Shoot.SetActive(shoot);
-        //    player2Death.SetActive(death);
-        //}
     }
 }

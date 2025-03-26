@@ -134,7 +134,721 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: recolor_1_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 630
+        width: 159
+        height: 139
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dd7717456fda1b4ea9d65349cb55eed
+      internalID: 542004979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: recolor_1_1
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 630
+        width: 159
+        height: 139
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d88bb16dac68364cb92665532215f74
+      internalID: -2093747994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: recolor_1_2
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 630
+        width: 159
+        height: 139
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcbda502906927f43b798a02cf367770
+      internalID: 1246631052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: recolor_1_3
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 517
+        width: 159
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78aa954e5e4e0f944a291a69e6e5dda1
+      internalID: 644613774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: recolor_1_4
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 630
+        width: 159
+        height: 139
+      alignment: 9
+      pivot: {x: 1.2306123, y: 0.54717845}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cd1510f8a87f21459d2c2bf2786d534
+      internalID: 1307500812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: recolor_1_5
+      rect:
+        serializedVersion: 2
+        x: 501
+        y: 630
+        width: 159
+        height: 139
+      alignment: 9
+      pivot: {x: 1.2306123, y: 0.54717845}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c7e4e6a73a3a38429dd9b73cc22cfa6
+      internalID: -165278132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: recolor_1_6
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 516
+        width: 159
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5245fb6d9012714cb2703c8746a3ca5
+      internalID: -1467243564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: recolor_1_7
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 523
+        width: 159
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 288105000724d3747a37fb891c862585
+      internalID: -1612285303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: recolor_1_8
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 524
+        width: 159
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 316f58d50cc7d86408992e902e8a7c04
+      internalID: -208536015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: recolor_1_9
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 521
+        width: 125
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4942f8b69699d34d92fb4f3909f1ad4
+      internalID: 1825197493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: recolor_1_10
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 417
+        width: 125
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d493c6cbef2a6f54690fbf94d0eb20e1
+      internalID: 1634651414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: recolor_1_11
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 419
+        width: 125
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c8f778f72060124383950c200281e08
+      internalID: -874432736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: recolor_1_12
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 432
+        width: 125
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbcdfcbc668fc354a9a97ad15b003277
+      internalID: -1910272666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: recolor_1_13
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 440
+        width: 125
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82aa604afa179cb489f24ab43685beb1
+      internalID: -677211676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: recolor_1_14
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 429
+        width: 125
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcd9040ae9455b54993ce442435517e3
+      internalID: -685338624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: recolor_1_15
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 314
+        width: 125
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af61d695c78040d4bac1cf368baafa41
+      internalID: -823634943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: recolor_1_16
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 317
+        width: 137
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e4b6827cb951f343893167cbc01bbd0
+      internalID: -1369647225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: recolor_1_17
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 321
+        width: 137
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 787fd5e2e26bbe34d8d815928e17ea77
+      internalID: -1766381276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: recolor_1_18
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 316
+        width: 137
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9093aea61c5e20748a6499e05c19fe41
+      internalID: 1821522521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: recolor_1_19
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 310
+        width: 137
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ff0ce607715e26438b2cc07019b2b36
+      internalID: 385324051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: recolor_1_20
+      rect:
+        serializedVersion: 2
+        x: 553
+        y: 199
+        width: 107
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da6d4cefc6e2e5e41a32e72e8a006be6
+      internalID: 2055790440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: recolor_1_21
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 209
+        width: 107
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f94eac828cfd6c04da1227ece6cc4dc7
+      internalID: 599182180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: recolor_1_22
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 207
+        width: 107
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb9191581e043654cb73668e61017135
+      internalID: -339888915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: recolor_1_23
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 205
+        width: 107
+        height: 73
+      alignment: 9
+      pivot: {x: -0.56289476, y: 0.34549347}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea51f9602340ff84f9e2f9d31bdbd140
+      internalID: 810596286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: recolor_1_24
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 210
+        width: 107
+        height: 93
+      alignment: 9
+      pivot: {x: -0.56289476, y: 0.34549347}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24349b2a32d94974bb62bf225b422db0
+      internalID: 1259475763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: recolor_1_25
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 91
+        width: 114
+        height: 93
+      alignment: 9
+      pivot: {x: -0.56289476, y: 0.34549347}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb9dc582c07ef444393b6fe2251df9a4
+      internalID: 953431590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: recolor_1_26
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 83
+        width: 114
+        height: 93
+      alignment: 9
+      pivot: {x: -0.56289476, y: 0.34549347}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2690628dea0b47f42ae6ade71d2f30d9
+      internalID: 1022113407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: recolor_1_27
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 100
+        width: 114
+        height: 93
+      alignment: 9
+      pivot: {x: -0.56289476, y: 0.34549347}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5d748072953a6341a19461eba2b891e
+      internalID: 723789574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: recolor_1_28
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 107
+        width: 114
+        height: 93
+      alignment: 9
+      pivot: {x: -0.56289476, y: 0.34549347}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af9698be1484c704ebb4e4c667af0239
+      internalID: -1797868637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: recolor_1_29
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 106
+        width: 114
+        height: 93
+      alignment: 9
+      pivot: {x: -0.56289476, y: 0.34549347}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da9658abbea36a64baf2d6ce92d57f1a
+      internalID: -1787310860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: recolor_1_30
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 1
+        width: 114
+        height: 93
+      alignment: 9
+      pivot: {x: -0.56289476, y: 0.34549347}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e4df112d1100f244bec98e04cdec837
+      internalID: 2002526632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: recolor_1_31
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 0
+        width: 114
+        height: 93
+      alignment: 9
+      pivot: {x: -0.56289476, y: 0.34549347}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cc28b92bb2cdb24b831a590a3d93b51
+      internalID: 1933414036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: recolor_1_32
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 0
+        width: 114
+        height: 93
+      alignment: 9
+      pivot: {x: -0.56289476, y: 0.34549347}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc7eca82333c1834f9523ee8f5a77418
+      internalID: 483496188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: recolor_1_33
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 0
+        width: 114
+        height: 93
+      alignment: 9
+      pivot: {x: -0.56289476, y: 0.34549347}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4dc03747ae96c0348a643856e6c02581
+      internalID: -235353208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -145,7 +859,41 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      recolor_1_0: 542004979
+      recolor_1_1: -2093747994
+      recolor_1_10: 1634651414
+      recolor_1_11: -874432736
+      recolor_1_12: -1910272666
+      recolor_1_13: -677211676
+      recolor_1_14: -685338624
+      recolor_1_15: -823634943
+      recolor_1_16: -1369647225
+      recolor_1_17: -1766381276
+      recolor_1_18: 1821522521
+      recolor_1_19: 385324051
+      recolor_1_2: 1246631052
+      recolor_1_20: 2055790440
+      recolor_1_21: 599182180
+      recolor_1_22: -339888915
+      recolor_1_23: 810596286
+      recolor_1_24: 1259475763
+      recolor_1_25: 953431590
+      recolor_1_26: 1698020375
+      recolor_1_27: 1022113407
+      recolor_1_28: 723789574
+      recolor_1_29: -1797868637
+      recolor_1_3: 644613774
+      recolor_1_30: -1787310860
+      recolor_1_31: 2002526632
+      recolor_1_32: 1933414036
+      recolor_1_33: 483496188
+      recolor_1_4: 1307500812
+      recolor_1_5: -165278132
+      recolor_1_6: -1467243564
+      recolor_1_7: -1612285303
+      recolor_1_8: -208536015
+      recolor_1_9: 1825197493
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

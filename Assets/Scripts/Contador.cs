@@ -40,6 +40,10 @@ public class Contador : MonoBehaviour
 
     public Transform objetoAMover;
 
+    // Nuevas variables para las posiciones de los jugadores
+    public Transform player1WinPosition;
+    public Transform player2WinPosition;
+
     void Start()
     {
         SetNewRandomTime();
@@ -131,11 +135,13 @@ public class Contador : MonoBehaviour
         {
             Debug.Log("JUGADOR 1 GANA LA RONDA");
             ActivateDeathAnimation(2); // Jugador 2 pierde
+            MoveWinningPlayer(1); // Cambia la posición z del Jugador 1
         }
         else if (player2ReactionTime < player1ReactionTime)
         {
             Debug.Log("JUGADOR 2 GANA LA RONDA");
             ActivateDeathAnimation(1); // Jugador 1 pierde
+            MoveWinningPlayer(2); // Cambia la posición z del Jugador 2
         }
         else
         {
@@ -147,6 +153,29 @@ public class Contador : MonoBehaviour
 
         EndRound();
         mensajeMostrado = true;
+    }
+    void MoveWinningPlayer(int winningPlayer)
+    {
+        if (objetoAMover != null)
+        {
+            Vector3 nuevaPosicion = objetoAMover.position;
+            nuevaPosicion.z += 8; // Aumentar la posición en Z
+            objetoAMover.position = nuevaPosicion;
+            Debug.Log($"El objeto se ha movido a la nueva posición Z: {nuevaPosicion.z}");
+        }
+
+        if (winningPlayer == 1 && player1WinPosition != null)
+        {
+            Vector3 newPosition = player1WinPosition.position;
+            newPosition.z = -1; // Cambia la posición Z cuando gana el Jugador 1
+            player1WinPosition.position = newPosition;
+        }
+        else if (winningPlayer == 2 && player2WinPosition != null)
+        {
+            Vector3 newPosition = player2WinPosition.position;
+            newPosition.z = -1; // Cambia la posición Z cuando gana el Jugador 2
+            player2WinPosition.position = newPosition;
+        }
     }
 
     void ActivateDeathAnimation(int losingPlayer)

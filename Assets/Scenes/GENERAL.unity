@@ -317,6 +317,8 @@ MonoBehaviour:
   player2Shoot: {fileID: 621274}
   player2Death: {fileID: 599696402}
   objetoAMover: {fileID: 122497123}
+  player1WinPosition: {fileID: 861852933}
+  player2WinPosition: {fileID: 1613387253}
 --- !u!4 &135917054
 Transform:
   m_ObjectHideFlags: 0
@@ -612,8 +614,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2b1d96476e1d6143a42911f8abe066f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemJugador1: 
-  itemJugador2: 
 --- !u!4 &631269298
 Transform:
   m_ObjectHideFlags: 0
